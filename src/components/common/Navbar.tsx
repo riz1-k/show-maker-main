@@ -1,5 +1,11 @@
 import Image from "next/image";
 import React, { useState } from "react";
+import {
+  Link,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -9,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="absolute left-0 top-0 z-50 w-full">
+    <header className=" sticky bg-white left-0 top-0 z-50 w-full">
       <div className="container mx-auto">
         <div className="relative -mx-4 flex items-center justify-between">
           <div className="w-60 max-w-full px-4">
@@ -41,37 +47,25 @@ const Navbar = () => {
                 }`}
               >
                 <ul className="block lg:flex">
-                  <li>
-                    <a
-                      href="#"
-                      className="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex"
-                    >
+                  <li className="flex py-2 cursor-pointer text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex">
+                    <Link to="home" smooth offset={-100}>
                       Home
-                    </a>
+                    </Link>
                   </li>
-                  <li>
-                    <a
-                      href="#faq"
-                      className="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex"
-                    >
+                  <li className="flex py-2 cursor-pointer text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex">
+                    <Link to="faq" smooth>
                       FAQ
-                    </a>
+                    </Link>
                   </li>
-                  <li>
-                    <a
-                      href="#team"
-                      className="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex"
-                    >
+                  <li className="flex py-2 cursor-pointer text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex">
+                    <Link to="team" smooth>
                       Team
-                    </a>
+                    </Link>
                   </li>
-                  <li>
-                    <a
-                      href="#testimonials"
-                      className="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex"
-                    >
+                  <li className="flex py-2 cursor-pointer text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex">
+                    <Link to="testimonials" smooth>
                       Testimonials
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>

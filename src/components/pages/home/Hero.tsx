@@ -3,10 +3,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section
-      id="faq"
-      className="relative bg-white pt-[120px] pb-[110px] lg:pt-[150px]"
-    >
+    <section id="home" className="relative bg-white pt-[90px] pb-[110px] ">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-5/12">

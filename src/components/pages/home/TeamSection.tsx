@@ -3,7 +3,7 @@ import TeamMember from "@/components/common/TeamMember";
 
 const TeamSection = () => {
   return (
-    <section className="pt-20 pb-10 lg:pt-[120px] lg:pb-20">
+    <section id="team" className="pt-20 pb-10 lg:pt-[120px] lg:pb-20">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
