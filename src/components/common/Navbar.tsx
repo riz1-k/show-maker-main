@@ -1,11 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import {
-  Link,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Link } from "react-scroll";
+import NextLink from "next/link";
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -19,7 +15,7 @@ const Navbar = () => {
       <div className="container mx-auto">
         <div className="relative -mx-4 flex items-center justify-between">
           <div className="w-60 max-w-full px-4">
-            <a href="javascript:void(0)" className="block w-full py-5">
+            <NextLink href="/" className="block w-full py-5">
               <Image
                 src="/logo.svg"
                 alt="logo"
@@ -27,9 +23,9 @@ const Navbar = () => {
                 width={200}
                 height={50}
               />
-            </a>
+            </NextLink>
           </div>
-          <div className="flex w-full items-center justify-between px-4">
+          <div className="flex w-full items-center justify-end   px-4">
             <div>
               <button
                 onClick={toggleNavbar}
@@ -69,14 +65,6 @@ const Navbar = () => {
                   </li>
                 </ul>
               </nav>
-            </div>
-            <div className="hidden justify-end pr-16 sm:flex lg:pr-0">
-              <a
-                href="javascript:void(0)"
-                className="rounded-lg bg-primary py-3 px-7 text-base font-medium text-white hover:bg-opacity-90"
-              >
-                Contact Us
-              </a>
             </div>
           </div>
         </div>

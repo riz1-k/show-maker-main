@@ -26,50 +26,18 @@ const HeroSection = () => {
                   </a>
                 </li>
               </ul>
-              <div className="clients pt-16">
-                <h6 className="mb-2 flex items-center text-xs font-normal text-body-color">
-                  Some Of Our Clients
-                  <span className="ml-2 inline-block h-[1px] w-8 bg-body-color"></span>
-                </h6>
-                <div className="flex items-center">
-                  <div className="mr-4 w-full py-3">
-                    <Image
-                      src="/brands/ayroui.svg"
-                      alt="ayroui"
-                      height={50}
-                      width={50}
-                    />
-                  </div>
-                  <div className="mr-4 w-full py-3">
-                    <Image
-                      src="/brands/graygrids.svg"
-                      alt="graygrids"
-                      height={50}
-                      width={50}
-                    />
-                  </div>
-                  <div className="mr-4 w-full py-3">
-                    <Image
-                      src="/brands/uideck.svg"
-                      alt="uideck"
-                      height={50}
-                      width={50}
-                    />
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <div className="hidden px-4 lg:block lg:w-1/12"></div>
           <div className="w-full px-4 lg:w-6/12">
             <div className="lg:ml-auto lg:text-right">
-              <div className="relative z-10 inline-block pt-11 lg:pt-0">
+              <div className="relative z-10 inline-block pt-11 md:-mt-14 lg:pt-0">
                 <Image
-                  src="/hero/hero-image-01.png"
+                  src="/hero/hero-img-01.jpg"
                   alt="hero"
-                  className="max-w-full lg:ml-auto"
-                  height={500}
-                  width={500}
+                  className="max-w-full lg:ml-auto rounded-md "
+                  height={200}
+                  width={420}
                 />
                 <span className="absolute -left-8 -bottom-8 z-[-1]">
                   <svg

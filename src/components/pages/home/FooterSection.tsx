@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -6,10 +7,16 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="flex flex-wrap items-center justify-between">
           <div className="w-full md:w-auto">
-            <h4 className="text-xl font-bold text-white">Company Name</h4>
+            <h4 className="text-xl font-bold text-white">Show Maker</h4>
             <p className="mt-2 text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
             </p>
+            <Link
+              href="/terms-and-conditions"
+              className="mt-2 text-white text-sm hover:underline"
+            >
+              Terms & Conditions | Privacy Policy
+            </Link>
           </div>
           <div className="w-full mt-4 md:mt-0 md:w-auto">
             <h5 className="text-lg font-semibold text-white">Contact</h5>
