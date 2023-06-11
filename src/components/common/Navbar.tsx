@@ -11,10 +11,10 @@ const Navbar = () => {
   };
 
   return (
-    <header className=" sticky bg-white left-0 top-0 z-50 w-full">
+    <header className=" sticky bg-[#000] left-0 top-0 z-50 w-full">
       <div className="container mx-auto">
         <div className="relative -mx-4 flex items-center justify-between">
-          <div className="w-60 max-w-full px-4">
+          {/* <div className="w-60 max-w-full px-4">
             <NextLink href="/" className="block w-full py-5">
               <Image
                 src="/logo.svg"
@@ -24,7 +24,7 @@ const Navbar = () => {
                 height={50}
               />
             </NextLink>
-          </div>
+          </div> */}
           <div className="flex w-full items-center justify-end   px-4">
             <div>
               <button
@@ -38,27 +38,27 @@ const Navbar = () => {
                 <span className="relative my-[6px] block h-[2px] w-[30px] bg-body-color"></span>
               </button>
               <nav
-                className={`absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none ${
+                className={`absolute right-4 top-full w-full max-w-[250px] rounded-lg  py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none ${
                   !navbarOpen ? "hidden" : ""
                 }`}
               >
                 <ul className="block lg:flex">
-                  <li className="flex py-2 cursor-pointer text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex">
+                  <li className="flex py-2 cursor-pointer text-base font-medium text-white hover:text-primary font-poppins tracking-wider  lg:ml-12 lg:inline-flex">
                     <Link to="home" smooth offset={-100}>
                       Home
                     </Link>
                   </li>
-                  <li className="flex py-2 cursor-pointer text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex">
+                  <li className="flex py-2 cursor-pointer text-base font-medium text-white hover:text-primary font-poppins tracking-wider  lg:ml-12 lg:inline-flex">
                     <Link to="faq" smooth>
                       FAQ
                     </Link>
                   </li>
-                  <li className="flex py-2 cursor-pointer text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex">
+                  <li className="flex py-2 cursor-pointer text-base font-medium text-white hover:text-primary font-poppins tracking-wider  lg:ml-12 lg:inline-flex">
                     <Link to="team" smooth>
                       Team
                     </Link>
                   </li>
-                  <li className="flex py-2 cursor-pointer text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex">
+                  <li className="flex py-2 cursor-pointer text-base font-medium text-white hover:text-primary font-poppins tracking-wider  lg:ml-12 lg:inline-flex">
                     <Link to="testimonials" smooth>
                       Testimonials
                     </Link>

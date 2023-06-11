@@ -10,9 +10,9 @@ export default function Card(props: Props) {
     <div className="w-full px-4 md:w-1/2 xl:w-1/3">
       <div className="mb-10 overflow-hidden rounded-lg bg-white">
         <img
-          src={`/cards/card-01/image-0${props.index}.jpg`}
+          src={`/cards/card-01/img-0${props.index}.jpg`}
           alt="image"
-          className="w-full"
+          className="w-full h-[230px] object-cover"
         />
         <div className="p-8 text-center sm:p-9 md:p-7 xl:p-9">
           <h3>

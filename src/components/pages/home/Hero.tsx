@@ -1,18 +1,33 @@
+import { url } from "inspector";
 import Image from "next/image";
 import React from "react";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative bg-white pt-[90px] pb-[110px] ">
-      <div className="container mx-auto">
+    <section
+      id="home"
+      style={{
+        backgroundImage: `url(/hero/hero-img-03.jpg)`,
+        boxShadow:
+          "0px 4px 4px 0px #00000040,inset 0 0 0 1000px rgba(0,0,0,.5)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+      className="relative bg-white pt-[90px] pb-[110px] h-[90vh]"
+    >
+      <div className="container mx-auto relative h-screen w-full left-0 top-0 ">
         <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-5/12">
-            <div className="hero-content">
-              <h1 className="mb-3 text-4xl font-bold leading-snug text-dark sm:text-[42px] lg:text-[40px] xl:text-[42px]">
-                The #1 Choice for Bringing Corporate <br />
-                Teams Together Like Family
+          <div className="w-full px-4 ">
+            <div className=" h-full flex flex-col items-center mt-32 ">
+              <h1 className="mb-3  font-poppins  text-center  text-4xl  font-bold leading-snug text-white sm:text-[42px] lg:text-[48px] xl:text-[50px]">
+                The
+                <span className="text-yellow-400"> #1 Choice </span>
+                for Bringing Corporate <br />
+                Teams Together Like{" "}
+                <span className="text-yellow-400"> Family!</span>
               </h1>
-              <p className="mb-8 max-w-[480px] text-base text-body-color">
+              <p className="mb-8 max-w-[580px] text-center text-lg font-poppins font-medium  text-gray-2">
                 Elevate Your Team Building: Discover Our 100+ Unique Activities
                 for Building Stronger Connections
               </p>
@@ -20,7 +35,7 @@ const HeroSection = () => {
                 <li>
                   <a
                     href="javascript:void(0)"
-                    className="inline-flex items-center justify-center rounded-lg bg-primary py-4 px-6 text-center text-base font-normal text-white hover:bg-opacity-90 sm:px-10 lg:px-8 xl:px-10"
+                    className="inline-flex items-center justify-center rounded-lg bg-yellow-500 hover:bg-yellow-500 py-4 px-6 text-center text-base font-normal text-white hover:bg-opacity-90 sm:px-10 lg:px-8 xl:px-10"
                   >
                     Contact Us
                   </a>
@@ -28,57 +43,16 @@ const HeroSection = () => {
               </ul>
             </div>
           </div>
-          <div className="hidden px-4 lg:block lg:w-1/12"></div>
-          <div className="w-full px-4 lg:w-6/12">
-            <div className="lg:ml-auto lg:text-right">
-              <div className="relative z-10 inline-block pt-11 md:-mt-14 lg:pt-0">
-                <Image
-                  src="/hero/hero-img-01.jpg"
-                  alt="hero"
-                  className="max-w-full lg:ml-auto rounded-md "
-                  height={200}
-                  width={420}
-                />
-                <span className="absolute -left-8 -bottom-8 z-[-1]">
-                  <svg
-                    width="93"
-                    height="93"
-                    viewBox="0 0 93 93"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="2.5" cy="2.5" r="2.5" fill="#3056D3" />
-                    <circle cx="2.5" cy="24.5" r="2.5" fill="#3056D3" />
-                    <circle cx="2.5" cy="46.5" r="2.5" fill="#3056D3" />
-                    <circle cx="2.5" cy="68.5" r="2.5" fill="#3056D3" />
-                    <circle cx="2.5" cy="90.5" r="2.5" fill="#3056D3" />
-                    <circle cx="24.5" cy="2.5" r="2.5" fill="#3056D3" />
-                    <circle cx="24.5" cy="24.5" r="2.5" fill="#3056D3" />
-                    <circle cx="24.5" cy="46.5" r="2.5" fill="#3056D3" />
-                    <circle cx="24.5" cy="68.5" r="2.5" fill="#3056D3" />
-                    <circle cx="24.5" cy="90.5" r="2.5" fill="#3056D3" />
-                    <circle cx="46.5" cy="2.5" r="2.5" fill="#3056D3" />
-                    <circle cx="46.5" cy="24.5" r="2.5" fill="#3056D3" />
-                    <circle cx="46.5" cy="46.5" r="2.5" fill="#3056D3" />
-                    <circle cx="46.5" cy="68.5" r="2.5" fill="#3056D3" />
-                    <circle cx="46.5" cy="90.5" r="2.5" fill="#3056D3" />
-                    <circle cx="68.5" cy="2.5" r="2.5" fill="#3056D3" />
-                    <circle cx="68.5" cy="24.5" r="2.5" fill="#3056D3" />
-                    <circle cx="68.5" cy="46.5" r="2.5" fill="#3056D3" />
-                    <circle cx="68.5" cy="68.5" r="2.5" fill="#3056D3" />
-                    <circle cx="68.5" cy="90.5" r="2.5" fill="#3056D3" />
-                    <circle cx="90.5" cy="2.5" r="2.5" fill="#3056D3" />
-                    <circle cx="90.5" cy="24.5" r="2.5" fill="#3056D3" />
-                    <circle cx="90.5" cy="46.5" r="2.5" fill="#3056D3" />
-                    <circle cx="90.5" cy="68.5" r="2.5" fill="#3056D3" />
-                    <circle cx="90.5" cy="90.5" r="2.5" fill="#3056D3" />
-                  </svg>
-                </span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
+      <span
+        className="absolute bottom-0 left-0 right-0 block h-24   bg-opacity-80 
+      from-transparent
+      to-[#000]
+      bg-gradient-to-b
+
+      "
+      />
     </section>
   );
 };

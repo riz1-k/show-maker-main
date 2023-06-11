@@ -6,6 +6,14 @@ export default function FAQSection() {
       id="faq"
       className="relative z-20 overflow-hidden bg-white pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]"
     >
+      <span
+        className="absolute top-0 left-0 right-0 block h-20   bg-opacity-80 
+      from-transparent
+      to-[#000]
+      bg-gradient-to-t
+
+      "
+      />
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">

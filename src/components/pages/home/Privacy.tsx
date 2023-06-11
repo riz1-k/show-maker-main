@@ -4,7 +4,23 @@ import { FC } from "react";
 
 const Privacy: FC = () => {
   return (
-    <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]">
+    <section
+      style={{
+        backgroundImage: `url(/hero/hero-img-04.jpg)`,
+        boxShadow:
+          "0px 4px 4px 0px #00000040,inset 0 0 0 1000px rgba(0,0,0,.5)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+      className="overflow-hidden relative pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]"
+    >
+      <span
+        className="absolute top-0 left-0 right-0 block h-24   bg-opacity-80 
+      from-transparent
+      to-[#000]
+      bg-gradient-to-t"
+      />
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-row-reverse flex-wrap items-center justify-between">
           <div className="w-full px-4 lg:w-6/12">
@@ -12,7 +28,7 @@ const Privacy: FC = () => {
               <div className="w-full px-3 sm:px-4 xl:w-1/2">
                 <div className="relative z-10 my-4">
                   <img
-                    src="/about/image-3.jpg"
+                    src="/offerings/img-02.jpg"
                     alt=""
                     className="w-full rounded-2xl"
                   />
@@ -598,7 +614,7 @@ const Privacy: FC = () => {
                 </div>
                 <div className="py-3 sm:py-4">
                   <img
-                    src="/about/image-2.jpg"
+                    src="/offerings/img-01.jpg"
                     alt=""
                     className="w-full rounded-2xl"
                   />
@@ -606,31 +622,35 @@ const Privacy: FC = () => {
               </div>
             </div>
           </div>
-          <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
+          <div className="w-full px-4 lg:w-1/2 ">
             <div className="mt-10 lg:mt-0">
-              <span className="mb-2 block text-lg font-semibold text-primary">
-                Privacy
+              <span className="mb-2 block  text-3xl md:text-7xl font-semibold font-poppins text-white">
+                Our Offerings
               </span>
-              <h2 className="mb-8 text-3xl font-bold text-dark sm:text-4xl">
-                Our Commitment to Your Privacy
-              </h2>
-              <p className="mb-8 text-base text-body-color">
-                At SHOWMAKER, we take your privacy seriously. Our Privacy Policy
-                outlines how we use and disclose information, including Personal
-                Information, that we obtain while providing our Services to
-                clients and their employees.
-              </p>
-              <p className="mb-12 text-base text-body-color">
-                "Personal Information" refers to any information that could be
-                used to identify or contact an individual, such as their name,
-                title, mailing address, email address, phone number,
-                employer/profession, or any other specific type of personal
-                information.
+
+              <p className="mb-8 mt-6  text-xl text-gray-2 font-poppins">
+                SHOWMAKER event management is unparalleled. They made our event
+                flawless and transformed my colleagues into a close-knit family.
+                Their teamwork and attention to detail were incredible. Thanks
+                to SHOWMAKER, our event was a resounding success, and the bonds
+                we formed will endure. I highly recommend them for their
+                professionalism and ability to create an unforgettable
+                experience.
+                <br />
+                Noel D'souza
               </p>
             </div>
           </div>
         </div>
       </div>
+      <span
+        className="absolute bottom-0 left-0 right-0 block h-24   bg-opacity-80 
+      from-transparent
+      to-[#000]
+      bg-gradient-to-b
+
+      "
+      />
     </section>
   );
 };

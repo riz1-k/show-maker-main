@@ -4,7 +4,25 @@ import { FC } from "react";
 
 const OurOffering: FC = () => {
   return (
-    <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]">
+    <section
+      style={{
+        backgroundImage: `url(/hero/hero-img-02.jpg)`,
+        boxShadow:
+          "0px 4px 4px 0px #00000040,inset 0 0 0 1000px rgba(0,0,0,.5)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+      className="overflow-hidden relative pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]"
+    >
+      <span
+        className="absolute top-0 left-0 right-0 block h-24   bg-opacity-80 
+      from-transparent
+      to-[#000]
+      bg-gradient-to-t
+
+      "
+      />
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap items-center justify-between">
           <div className="w-full px-4 lg:w-6/12">
@@ -12,14 +30,14 @@ const OurOffering: FC = () => {
               <div className="w-full px-3 sm:px-4 xl:w-1/2">
                 <div className="py-3 sm:py-4">
                   <img
-                    src="/about/image-1.jpg"
+                    src="/about/img-1.jpg"
                     alt=""
                     className="w-full rounded-2xl"
                   />
                 </div>
                 <div className="py-3 sm:py-4">
                   <img
-                    src="/about/image-2.jpg"
+                    src="/about/img-3.jpg"
                     alt=""
                     className="w-full rounded-2xl"
                   />
@@ -28,7 +46,7 @@ const OurOffering: FC = () => {
               <div className="w-full px-3 sm:px-4 xl:w-1/2">
                 <div className="relative z-10 my-4">
                   <img
-                    src="/about/image-3.jpg"
+                    src="/about/img-2.jpg"
                     alt=""
                     className="w-full rounded-2xl"
                   />
@@ -608,30 +626,28 @@ const OurOffering: FC = () => {
           </div>
           <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
             <div className="mt-10 lg:mt-0">
-              <span className="mb-2 block text-lg font-semibold text-primary">
-                Our Offerings
+              <span className="mb-2 block  text-3xl md:text-7xl font-semibold font-poppins text-white">
+                About Us
               </span>
-              <h2 className="mb-8 text-3xl font-bold text-dark sm:text-4xl">
-                Make your customers happy by giving services.
-              </h2>
-              <p className="mb-8 text-base text-body-color">
+
+              <p className="mb-8 mt-6  text-xl text-gray-2 font-poppins">
                 SHOWMAKER is an event management company that specializes in
                 creating purpose-built corporate events designed to build
                 stronger team connections and foster a family-like environment
                 within the workplace.
               </p>
-              <p className="mb-12 text-base text-body-color">
-                SHOWMAKER is an event management company that specializes in
-                creating purpose-built corporate events designed to build
-                stronger team connections and foster a family-like environment
-                within the workplace. SHOWMAKER works with a wide range of
-                clients across various sectors, including corporate, B2B, B2C,
-                hospital, and more.
-              </p>
             </div>
           </div>
         </div>
       </div>
+      <span
+        className="absolute bottom-0 left-0 right-0 block h-24   bg-opacity-80 
+      from-transparent
+      to-[#000]
+      bg-gradient-to-b
+
+      "
+      />
     </section>
   );
 };

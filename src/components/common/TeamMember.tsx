@@ -5,17 +5,22 @@ interface Props {
   name: string;
   role: string;
   imageSrc: string;
+  redirect: string;
 }
 
-const TeamMember: React.FC<Props> = ({ name, role, imageSrc }) => {
+const TeamMember: React.FC<Props> = ({ name, role, imageSrc, redirect }) => {
   return (
-    <div className="w-full px-4 md:w-1/2 xl:w-1/4">
+    <a
+      target="_blank"
+      href={redirect}
+      className="w-[298px] h-[400px] px-4 md:w-1/2 xl:w-1/4"
+    >
       <div className="mx-auto mb-10 w-full max-w-[370px]">
         <div className="relative overflow-hidden rounded-lg">
           <Image
             src={imageSrc}
             alt="image"
-            className="w-full"
+            className="w-full object-center"
             height={370}
             width={370}
           />
@@ -196,7 +201,7 @@ const TeamMember: React.FC<Props> = ({ name, role, imageSrc }) => {
           </div>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 
