@@ -39,12 +39,12 @@ const testimonials: ITestimonial[] = [
   },
   {
     name: "Suprita Kumari",
-    position: "Head of Marketing",
+    position: "Head of Human Resource",
     quote: `SHOWMAKER event management is unparalleled. They made our event flawless and transformed my colleagues into a close-knit family. Their teamwork and attention to detail were incredible. Thanks to SHOWMAKER, our event was a resounding success, and the bonds we formed will endure. I highly recommend them for their professionalism and ability to create an unforgettable experience.`,
   },
   {
     name: "Noel D'souza",
-    position: "Head of Marketing",
+    position: "Manager",
     quote: `I'm thrilled to share my experience with SHOWMAKER event management. They truly made our event unforgettable by incorporating the captivating theme of Avatar. Their attention to detail and creativity brought the essence of the movie to life. Not only did they flawlessly execute the event, but they also enhanced team bonding and morale. I strongly recommend SHOWMAKER for an unforgettable experience and a remarkable boost in team spirit.`,
   },
 
