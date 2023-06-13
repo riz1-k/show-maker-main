@@ -75,34 +75,31 @@ const TestimonialSection = () => {
         </div>
       </div>
 
-      <div>
-        <button
-          className="absolute bg-slate-300 rounded-full px-5 py-3.5 left-2  md:left-10 top-1/2 transform -translate-y-1/2 focus:outline-none"
-          onClick={() => {
-            if (activeSlide === 0)
-              return setActiveSlide(testimonials.length - 1);
-            setActiveSlide(activeSlide - 1);
-          }}
-        >
-          {`<`}
-        </button>
-        {testimonials.map(
-          (testimonial, index) =>
-            index === activeSlide && (
-              <SingleTestimonidal {...testimonial} key={index} />
-            )
-        )}
-        <button
-          className="absolute bg-slate-300 rounded-full px-5 py-3.5 right-2  md:right-10 top-1/2 transform -translate-y-1/2 focus:outline-none transition-all"
-          onClick={() => {
-            if (activeSlide === testimonials.length - 1)
-              return setActiveSlide(0);
-            setActiveSlide(activeSlide + 1);
-          }}
-        >
-          {`>`}
-        </button>
-      </div>
+      <button
+        type="button"
+        className="absolute z-50 bg-slate-300 rounded-full px-5 py-3.5 left-2  md:left-10 top-1/2 transform -translate-y-1/2 focus:outline-none transition-all"
+        onClick={() => {
+          if (activeSlide === 0) return setActiveSlide(testimonials.length - 1);
+          setActiveSlide(activeSlide - 1);
+        }}
+      >
+        {`<`}
+      </button>
+      {testimonials.map(
+        (testimonial, index) =>
+          index === activeSlide && (
+            <SingleTestimonidal {...testimonial} key={index} />
+          )
+      )}
+      <button
+        className="absolute bg-slate-300 rounded-full px-5 py-3.5 right-2  md:right-10 top-1/2 transform -translate-y-1/2 focus:outline-none transition-all"
+        onClick={() => {
+          if (activeSlide === testimonials.length - 1) return setActiveSlide(0);
+          setActiveSlide(activeSlide + 1);
+        }}
+      >
+        {`>`}
+      </button>
     </section>
   );
 };
