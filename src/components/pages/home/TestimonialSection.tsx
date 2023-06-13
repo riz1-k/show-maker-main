@@ -50,7 +50,7 @@ const testimonials: ITestimonial[] = [
 
   {
     name: "Aditi Nayak",
-    position: "Head of Marketing",
+    position: "DevOps Engineer",
     quote: `SHOWMAKER event management is incredible! Their Angry Birds-themed event for employees and their families was a huge hit. They created a fun and engaging experience that brought everyone together. Thank you SHOWMAKER for organizing an amazing event`,
   },
 ];
@@ -77,7 +77,7 @@ const TestimonialSection = () => {
 
       <div>
         <button
-          className="absolute bg-slate-300 rounded-full px-5 py-3.5 left-10 top-1/2 transform -translate-y-1/2 focus:outline-none"
+          className="absolute bg-slate-300 rounded-full px-5 py-3.5 left-2  md:left-10 top-1/2 transform -translate-y-1/2 focus:outline-none"
           onClick={() => {
             if (activeSlide === 0)
               return setActiveSlide(testimonials.length - 1);
@@ -93,7 +93,7 @@ const TestimonialSection = () => {
             )
         )}
         <button
-          className="absolute bg-slate-300 rounded-full px-5 py-3.5 right-10 top-1/2 transform -translate-y-1/2 focus:outline-none transition-all"
+          className="absolute bg-slate-300 rounded-full px-5 py-3.5 right-2  md:right-10 top-1/2 transform -translate-y-1/2 focus:outline-none transition-all"
           onClick={() => {
             if (activeSlide === testimonials.length - 1)
               return setActiveSlide(0);
