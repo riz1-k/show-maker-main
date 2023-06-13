@@ -1,85 +1,58 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
 import React from "react";
+import { AiFillLinkedin } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary py-6">
+    <footer className="bg-slate-800 py-6">
       <div className="container mx-auto">
         <div className="flex flex-wrap items-center justify-between">
           <div className="w-full md:w-auto">
-            <h4 className="text-xl font-bold text-white">Show Maker</h4>
+            <h4 className="text-xl font-bold text-white uppercase">
+              ShowMaker
+            </h4>
             <p className="mt-2 text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              Ignite corporate family magic through SHOWMAKER's enchanting
+              events. <br /> Elevate your experience today and let the
+              extraordinary begin.
             </p>
             <Link
               href="/terms-and-conditions"
-              className="mt-2 text-white text-sm hover:underline"
+              className="mt-3 text-white text-sm hover:underline"
             >
               Terms & Conditions | Privacy Policy
             </Link>
           </div>
           <div className="w-full mt-4 md:mt-0 md:w-auto">
             <h5 className="text-lg font-semibold text-white">Contact</h5>
-            <p className="mt-2 text-white">123 Street, City Name, Country</p>
-            <p className="mt-2 text-white">contact@example.com</p>
-            <p className="mt-2 text-white">+1234567890</p>
+            <p className="mt-2 text-white">
+              No. 1/1, Anepalya 5th main cross,Adugodi Post, Bangalore - 560030
+            </p>
+            <div className="flex items-center space-x-5 mt-2">
+              <a
+                href="tel:+919535677151"
+                className=" text-white hover:underline underline-offset-4"
+              >
+                📞+91 9535677151
+              </a>
+              <a
+                href="tel:+919535914893"
+                className=" text-white hover:underline underline-offset-4"
+              >
+                📞+91 9535914893
+              </a>
+            </div>
           </div>
           <div className="w-full mt-4 md:mt-0 md:w-auto">
             <h5 className="text-lg font-semibold text-white">Follow Us</h5>
             <div className="flex mt-2">
-              <a href="#" className="text-white hover:text-gray-200 mr-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </a>
-              <a href="#" className="text-white hover:text-gray-200 mr-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-              </a>
-              <a href="#" className="text-white hover:text-gray-200">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17.6 7.6L19 6 21 9 18 11l-1.5-2.1"
-                  />
-                </svg>
+              <a
+                href="https://www.linkedin.com/company/showmaker-events/"
+                target="_blank"
+                className="text-white hover:text-gray-200"
+              >
+                <AiFillLinkedin size={30} />
               </a>
             </div>
           </div>

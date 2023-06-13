@@ -13,18 +13,20 @@ const Navbar = () => {
   return (
     <header className=" sticky bg-[#000] left-0 top-0 z-50 w-full">
       <div className="container mx-auto">
-        <div className="relative -mx-4 flex items-center justify-between">
-          {/* <div className="w-60 max-w-full px-4">
-            <NextLink href="/" className="block w-full py-5">
+        <div className="relative  flex items-center justify-between">
+          <div className=" max-h-24  px-4">
+            <NextLink href="/" className=" w-full flex  items-center ">
               <Image
-                src="/logo.svg"
+                src="/SHOWMAKERSVG123.svg"
                 alt="logo"
-                className="w-full"
-                width={200}
+                width={120}
                 height={50}
               />
+              <h1 className="text-2xl whitespace-pre text-blue-500   font-poppins font-bold uppercase -mt-4   ">
+                ShowMaker
+              </h1>
             </NextLink>
-          </div> */}
+          </div>
           <div className="flex w-full items-center justify-end   px-4">
             <div>
               <button

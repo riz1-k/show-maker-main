@@ -1,27 +1,57 @@
-import TestimonialComponent from "@/components/common/Testimonial";
-import { useState } from "react";
+/* eslint-disable react/no-unescaped-entities */
+import { FC, useState } from "react";
 
-const testimonials = [
+interface ITestimonial {
+  name: string;
+  position: string;
+  quote: string;
+}
+
+const SingleTestimonidal: FC<ITestimonial> = ({ name, quote, position }) => (
+  <div className="w-full  flex flex-col items-center justify-center gap-8 transition-all duration-300 ease-in-out transform ">
+    <h1 className="text-xl text-gray-600 leading-relaxed text-center w-4/5">
+      {quote}
+    </h1>
+    <div className="flex items-center gap-4">
+      <div className="flex flex-col ">
+        <label className="text-gray-600 text-xl font-semibold text-center font-poppins">
+          - {name}
+        </label>
+        <label className="text-gray-600 text-center font-medium text-base">
+          {position}
+        </label>
+      </div>
+    </div>
+  </div>
+);
+
+const testimonials: ITestimonial[] = [
   {
-    name: "Larry Diamond",
-    position: "Chief Executive Officer",
-    comment:
-      "Velit est sit voluptas eum sapiente omnis! Porro, impedit minus quam reprehenderit tempore sint quaerat id! Mollitia perspiciatis est asperiores commodi labore!",
-    profileImage: "/testimonials/testimonial-01/image-01.jpg",
+    name: "Bobby Kuruvilla",
+    position: "Head of People and Culture",
+    quote: `"SHOWMAKER event management is outstanding. They flawlessly executed
+    our conference meet and team building activity, boosting employee
+    morale to new heights. Their attention to detail and organizational
+    skills were exceptional. Thanks to SHOWMAKER, our event was a
+    resounding success, and our team is more united than ever. I strongly
+    endorse their services for creating unforgettable experiences and
+    fostering a remarkable enhancement in team spirit."`,
   },
   {
-    name: "Emily Adams",
-    position: "Marketing Manager",
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur erat at ipsum tincidunt, sit amet blandit nisi efficitur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
-    profileImage: "/testimonials/testimonial-01/image-01.jpg",
+    name: "Suprita Kumari",
+    position: "Head of Marketing",
+    quote: `SHOWMAKER event management is unparalleled. They made our event flawless and transformed my colleagues into a close-knit family. Their teamwork and attention to detail were incredible. Thanks to SHOWMAKER, our event was a resounding success, and the bonds we formed will endure. I highly recommend them for their professionalism and ability to create an unforgettable experience.`,
   },
   {
-    name: "John Doe",
-    position: "Software Engineer",
-    comment:
-      "Fusce vel iaculis tellus, at placerat leo. Duis et mi eu lectus lobortis eleifend. Donec sollicitudin ante ac risus auctor, sed iaculis enim efficitur.",
-    profileImage: "/testimonials/testimonial-01/image-01.jpg",
+    name: "Noel D'souza",
+    position: "Head of Marketing",
+    quote: `I'm thrilled to share my experience with SHOWMAKER event management. They truly made our event unforgettable by incorporating the captivating theme of Avatar. Their attention to detail and creativity brought the essence of the movie to life. Not only did they flawlessly execute the event, but they also enhanced team bonding and morale. I strongly recommend SHOWMAKER for an unforgettable experience and a remarkable boost in team spirit.`,
+  },
+
+  {
+    name: "Aditi Nayak",
+    position: "Head of Marketing",
+    quote: `SHOWMAKER event management is incredible! Their Angry Birds-themed event for employees and their families was a huge hit. They created a fun and engaging experience that brought everyone together. Thank you SHOWMAKER for organizing an amazing event`,
   },
 ];
 
@@ -30,7 +60,7 @@ const TestimonialSection = () => {
   return (
     <section
       id="testimonials"
-      className="pt-20 pb-20 lg:pt-[120px] lg:pb-[120px]"
+      className="pt-20 pb-20 lg:pt-[120px] lg:pb-[120px] relative h-screen"
     >
       <div className="-mx-4 flex flex-wrap">
         <div className="w-full px-4">
@@ -45,77 +75,33 @@ const TestimonialSection = () => {
         </div>
       </div>
 
-      <div className="container mx-auto">
-        <div>
-          <div className="relative flex justify-center">
-            <div className="relative w-full pb-16 md:w-11/12 lg:w-10/12 xl:w-8/12 xl:pb-0">
-              <div
-                className="flex-no-wrap snap mx-auto flex h-auto w-full max-w-[300px] overflow-hidden transition-all xs:max-w-[368px] sm:max-w-[508px] md:max-w-[630px] lg:max-w-[738px] 2xl:max-w-[850px]"
-                x-ref="carousel"
-              >
-                {testimonials.map((testimonial, index) =>
-                  index === activeSlide - 1 ? (
-                    <TestimonialComponent
-                      key={index}
-                      comment={testimonial.comment}
-                      name={testimonial.name}
-                      profileImage={testimonial.profileImage}
-                      position={testimonial.position}
-                    />
-                  ) : null
-                )}
-              </div>
-              <div className="absolute left-0 right-0 bottom-0 flex items-center justify-center lg:pl-[120px] 2xl:pl-0">
-                <button
-                  className="mx-1 flex h-12 w-12 items-center justify-center rounded-full bg-white text-primary shadow-input transition-all hover:bg-primary hover:text-white"
-                  onClick={() => {
-                    if (activeSlide === 1) {
-                      setActiveSlide(testimonials.length);
-                    } else {
-                      setActiveSlide(activeSlide - 1);
-                    }
-                  }}
-                >
-                  <svg
-                    width="15"
-                    height="13"
-                    viewBox="0 0 15 13"
-                    className="fill-current"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M5.24264 11.8033L0.46967 7.03037C0.176777 6.73748 0.176777 6.2626 0.46967 5.96971L5.24264 1.19674C5.53553 0.903845 6.01041 0.903845 6.3033 1.19674C6.59619 1.48963 6.59619 1.96451 6.3033 2.2574L2.81066 5.75004H14C14.4142 5.75004 14.75 6.08583 14.75 6.50004C14.75 6.91425 14.4142 7.25004 14 7.25004H2.81066L6.3033 10.7427C6.59619 11.0356 6.59619 11.5104 6.3033 11.8033C6.01041 12.0962 5.53553 12.0962 5.24264 11.8033Z"
-                    />
-                  </svg>
-                </button>
-                <button
-                  className="mx-1 flex h-12 w-12 items-center justify-center rounded-full bg-white text-primary shadow-input transition-all hover:bg-primary hover:text-white"
-                  onClick={() => {
-                    if (activeSlide === testimonials.length) {
-                      setActiveSlide(1);
-                    } else {
-                      setActiveSlide(activeSlide + 1);
-                    }
-                  }}
-                >
-                  <svg
-                    width="15"
-                    height="13"
-                    viewBox="0 0 15 13"
-                    className="fill-current"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M9.75736 11.8033L14.5303 7.03037C14.8232 6.73748 14.8232 6.2626 14.5303 5.96971L9.75736 1.19674C9.46447 0.903845 8.98959 0.903845 8.6967 1.19674C8.40381 1.48963 8.40381 1.96451 8.6967 2.2574L12.1893 5.75004H1C0.585786 5.75004 0.25 6.08583 0.25 6.50004C0.25 6.91425 0.585786 7.25004 1 7.25004H12.1893L8.6967 10.7427C8.40381 11.0356 8.40381 11.5104 8.6967 11.8033C8.98959 12.0962 9.46447 12.0962 9.75736 11.8033Z"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div>
+        <button
+          className="absolute bg-slate-300 rounded-full px-5 py-3.5 left-10 top-1/2 transform -translate-y-1/2 focus:outline-none"
+          onClick={() => {
+            if (activeSlide === 0)
+              return setActiveSlide(testimonials.length - 1);
+            setActiveSlide(activeSlide - 1);
+          }}
+        >
+          {`<`}
+        </button>
+        {testimonials.map(
+          (testimonial, index) =>
+            index === activeSlide && (
+              <SingleTestimonidal {...testimonial} key={index} />
+            )
+        )}
+        <button
+          className="absolute bg-slate-300 rounded-full px-5 py-3.5 right-10 top-1/2 transform -translate-y-1/2 focus:outline-none transition-all"
+          onClick={() => {
+            if (activeSlide === testimonials.length - 1)
+              return setActiveSlide(0);
+            setActiveSlide(activeSlide + 1);
+          }}
+        >
+          {`>`}
+        </button>
       </div>
     </section>
   );

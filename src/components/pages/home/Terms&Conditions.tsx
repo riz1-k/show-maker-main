@@ -4,7 +4,61 @@ import React from "react";
 const TermsAndConditions: React.FC = () => {
   return (
     <main id="t&c" className="container mx-auto py-8">
-      <h1 className="text-3xl font-bold mb-6">Terms &amp; Conditions</h1>
+      <div className="bg-white p-6 rounded ">
+        <h2 className="text-2xl font-bold mb-4">Privacy Policy</h2>
+        <p>
+          At SHOWMAKER, we take your privacy seriously. Our Privacy Policy
+          outlines how we use and disclose information, including Personal
+          Information, that we obtain while providing our Services to clients
+          and their employees. <br />
+          <br /> "Personal Information" refers to any information that could be
+          used to identify or contact an individual, such as their name, title,
+          mailing address, email address, phone number, employer/profession, or
+          any other specific type of personal information. At SHOWMAKER, we
+          recognize the sensitivity of Personal Information and take all
+          necessary steps to protect it. <br />
+          <br />
+          <b> How We Use Your Information</b>: At SHOWMAKER, we use your
+          information for a variety of legitimate business purposes, as
+          permitted by applicable law. Specifically, we may use your personal
+          information in the following ways:
+          <br />
+          <ul className="list-decimal container mt-2">
+            <li>
+              <b>Communication:</b> We may use your personal information to
+              communicate with you about our products or services, respond to
+              your inquiries, and fulfill your requests for our services. This
+              includes helping you to complete transactions, process payments,
+              and other customer service purposes. Service Enhancements: We use
+              your information to improve our services and better understand how
+              you use them, both on an individualized and aggregated basis. This
+              includes research and analytical purposes, which help us to
+              continually enhance and refine our offerings.
+            </li>
+            <li>
+              <b>Marketing:</b> We may send you communications related to our
+              business, either from SHOWMAKER directly or from our partners.
+              This includes marketing messages, newsletters, promotions,
+              customer satisfaction surveys, and other related communications
+              How We Share Your Information: At SHOWMAKER, we do not sell or
+              share your Personal Information with third parties for marketing
+              purposes. However, we may share and use your Personal Information
+              as described below: Affiliates and Subsidiaries: We may share your
+              information with our affiliates and subsidiaries, as necessary to
+              provide our services and operate our business.
+            </li>
+            <li>
+              <b> Partners:</b> We may also share your information with partners
+              who perform specific purposes on our behalf. These purposes may
+              include marketing, newsletters, promotions, customer satisfaction
+              surveys, and other communications related to our business. Our
+              partners have access to your information only to perform their
+              jobs, and are prohibited from using it for other purposes.
+            </li>
+          </ul>
+        </p>
+      </div>
+
       <div className="bg-white p-6 rounded ">
         <h2 className="text-2xl font-bold mb-4">
           Standard Terms of Client Business
