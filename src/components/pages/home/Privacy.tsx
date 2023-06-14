@@ -629,15 +629,12 @@ const Privacy: FC = () => {
               </span>
 
               <p className="mb-8 mt-6  text-xl text-gray-2 font-poppins">
-                SHOWMAKER event management is unparalleled. They made our event
-                flawless and transformed my colleagues into a close-knit family.
-                Their teamwork and attention to detail were incredible. Thanks
-                to SHOWMAKER, our event was a resounding success, and the bonds
-                we formed will endure. I highly recommend them for their
-                professionalism and ability to create an unforgettable
-                experience.
-                <br />
-                Noel D'souza
+                SHOWMAKER works with a wide range of clients across various
+                sectors, including corporate, B2B, B2C, hospital, and more. We
+                believe that effective event management is crucial for the
+                success of any organization, regardless of industry. That's why
+                we strive to provide tailored solutions to meet the unique needs
+                of each of our clients, no matter their sector.
               </p>
             </div>
           </div>
