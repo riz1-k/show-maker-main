@@ -1,9 +1,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import { Link } from "react-scroll";
 import NextLink from "next/link";
 
-const Navbar = () => {
+const Navbar2 = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -46,24 +45,16 @@ const Navbar = () => {
               >
                 <ul className="block lg:flex">
                   <li className="flex py-2 cursor-pointer text-base font-medium text-white hover:text-primary font-poppins tracking-wider  lg:ml-12 lg:inline-flex">
-                    <Link to="home" smooth offset={-100}>
-                      Home
-                    </Link>
+                    <NextLink href="/#home">Home</NextLink>
                   </li>
                   <li className="flex py-2 cursor-pointer text-base font-medium text-white hover:text-primary font-poppins tracking-wider  lg:ml-12 lg:inline-flex">
-                    <Link to="faq" smooth>
-                      FAQ
-                    </Link>
+                    <NextLink href="/#faq">FAQ</NextLink>
                   </li>
                   <li className="flex py-2 cursor-pointer text-base font-medium text-white hover:text-primary font-poppins tracking-wider  lg:ml-12 lg:inline-flex">
-                    <Link to="team" smooth>
-                      Team
-                    </Link>
+                    <NextLink href="/#team">Team</NextLink>
                   </li>
                   <li className="flex py-2 cursor-pointer text-base font-medium text-white hover:text-primary font-poppins tracking-wider  lg:ml-12 lg:inline-flex">
-                    <Link to="testimonials" smooth>
-                      Testimonials
-                    </Link>
+                    <NextLink href="/#testimonials">Testimonials</NextLink>
                   </li>
                 </ul>
               </nav>
@@ -75,4 +66,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar2;
