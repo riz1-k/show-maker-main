@@ -31,6 +31,12 @@ const Footer = () => {
             </p>
             <div className="flex items-center space-x-5 mt-2">
               <a
+                href="tel:+919535914893"
+                className=" text-white hover:underline underline-offset-4"
+              >
+                📧 mithun.sam@showmaker.in
+              </a>
+              <a
                 href="tel:+919535677151"
                 className=" text-white hover:underline underline-offset-4"
               >
